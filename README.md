@@ -11,5 +11,35 @@ The LoRa modules must be connected with a 3.3V power source and the current is u
 
 In this prototype a 20x4 SPI LCD module was used to save some digital pins.
 
-If you want more pins, the LoRA module TXEN and RXEN pins are connected to Arduino digital pins, but they can be connected to VCC using 10k pull-up resistors if you don't want disable RX and TX.
+The LoRA module TXEN and RXEN pins are connected to Arduino digital (5 and 6) pins, but they can be connected to VCC using 10k pull-up resistors if you don't want control RX and TX and save two pins.
+
+Arduino PRO ----- LoRa NiceRF
+
+ GND -----------------   GND
+
+ D6  -----------------   TXEN
+
+ D5  -----------------   RXEN
+
+ D13 -----------------   SCK
+
+ D12 -----------------   MISO
+
+ D11 -----------------   MOSI
+
+ D10 -----------------   MSS
+
+ NC  -----------------   DIO2
+
+ NC  -----------------   DIO1
+
+ D9  -----------------   DIO0
+
+ VCC (3.3V)-----------   VCC
+
+ D8  -----------------   MRESET
+
+ A4  -----------------   LCD SPI SDA
+ 
+ A5 ------------------   LCD SPI SCL
 
